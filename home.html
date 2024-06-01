@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <style>
+        body {
+            background-image: url("{% static 'img2.jpg' %}");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            color: white; /* Set default text color to white */
+            text-align: center; /* Center align all text */
+        }
+        .header-container {
+            background-color: rgba(0, 0, 240, 0.7); /* Set background color of the header container to blue with opacity */
+            padding: 10px; /* Add padding around the header container */
+            display: inline-block; /* Add space below the header container */
+        }
+        .main-heading {
+            /* Set background color of the heading to blue with opacity */
+            padding: 10px; /* Add padding around the heading */
+            display: inline-block; /* Ensure the background covers only the text width */
+        }
+        .start-button {
+            margin-top: 20px; /* Add some space above the button */
+            background-color: red; /* Set background color of the button to yellow */
+            color: white; /* Set text color of the button to white */
+            border: none; /* Remove button border */
+            padding: 10px 20px; /* Add padding to the button */
+            font-size: 20px; /* Set font size of the button */
+            cursor: pointer; /* Change cursor to pointer on hover */
+            transition: background-color 0.3s; /* Add smooth transition for hover effect */
+        }
+        .start-button:hover {
+            background-color: #636358; /* Change button color on hover to a lighter yellow */
+        }
+    </style>
+</head>
+<body>
+    <div class="header-container">
+        <h2>Welcome to</h2>
+        <h1 class="main-heading">House Price Prediction System</h1>
+    </div>
+    <form action="predict">
+        <input type="submit" class="start-button" value="CLICK TO START">
+    </form>
+</body>
+</html>
